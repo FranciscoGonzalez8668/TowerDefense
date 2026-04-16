@@ -7,8 +7,7 @@ public class ProjectileCollision : MonoBehaviour
     {
         if(other.CompareTag("Enemy"))
         {
-            other.gameObject.SetActive(false);
-            EnemyManager.instance.CheckFinish();
+            other.GetComponent<EnemyDeath>().TriggerDeath();
             gameObject.SetActive(false);
         }
     }
