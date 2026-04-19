@@ -1,12 +1,16 @@
 using UnityEngine;
 
-class EnemyDeath : MonoBehaviour 
+public class EnemyDeath : MonoBehaviour 
 {
     private Animator animator;
 
-    public void Start()
+
+    void Start()
     {
-        animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
     }
 
     public void TriggerDeath()
@@ -19,7 +23,8 @@ class EnemyDeath : MonoBehaviour
     }
     public void OnDeathComplete()
     {
-        Destroy(gameObject);
+        Debug.Log("Enemy died");
+        Destroy(transform.parent.gameObject);   
     }
 
 }

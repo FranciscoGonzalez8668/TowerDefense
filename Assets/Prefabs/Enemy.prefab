@@ -94,7 +94,8 @@ GameObject:
   - component: {fileID: 2872385384305238561}
   - component: {fileID: 6459695114601670144}
   - component: {fileID: 2799471623532223153}
-  - component: {fileID: 2510511515165700077}
+  - component: {fileID: 7386927358094850871}
+  - component: {fileID: 6589251558329011465}
   m_Layer: 0
   m_Name: enemy-ufo-a-weapon
   m_TagString: Untagged
@@ -168,7 +169,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2510511515165700077
+--- !u!95 &7386927358094850871
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -189,6 +190,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6589251558329011465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6980430290633863827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57d9724ba96c6934f8fed7ff24828d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8264121297588161780
 GameObject:
   m_ObjectHideFlags: 0

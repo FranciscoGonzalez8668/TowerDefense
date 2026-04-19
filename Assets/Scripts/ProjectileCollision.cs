@@ -7,7 +7,7 @@ public class ProjectileCollision : MonoBehaviour
     {
         if(other.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyDeath>().TriggerDeath();
+            other.GetComponentInChildren<EnemyDeath>().TriggerDeath();
             gameObject.SetActive(false);
         }
     }
