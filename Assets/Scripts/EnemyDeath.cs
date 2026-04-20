@@ -15,11 +15,11 @@ public class EnemyDeath : MonoBehaviour
 
     public void TriggerDeath()
     {
+        GetComponentInParent<Collider>().enabled = false;
         if (animator != null)
         {
             animator.SetTrigger("Die");
         }
-
     }
     public void OnDeathComplete()
     {
