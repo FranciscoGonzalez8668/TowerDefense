@@ -6,6 +6,7 @@ public class EnemyManager : MonoBehaviour
     public static EnemyManager instance;
 
     public List<GameObject> activeEnemies = new List<GameObject>();
+    public int killedCount = 0;
 
     void Awake()
     {

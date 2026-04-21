@@ -23,8 +23,9 @@ public class EnemyDeath : MonoBehaviour
     }
     public void OnDeathComplete()
     {
-        Debug.Log("Enemy died");
-        Destroy(transform.parent.gameObject);   
+        EnemyManager.instance.killedCount++;
+        EnemyManager.instance.activeEnemies.Remove(transform.parent.gameObject);
+        Destroy(transform.parent.gameObject);
     }
 
 }
