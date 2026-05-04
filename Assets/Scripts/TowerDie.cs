@@ -18,6 +18,10 @@ public class TowerDie : MonoBehaviour
 
             transform.parent.gameObject.SetActive(false);
         }
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlayDefeat();
+        }
     }
 
 }

@@ -7,6 +7,9 @@ public class TurretShooter : MonoBehaviour
 
     [SerializeField] private Animator canonAnimation;
 
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip shootClip;
+
 
     void Update()
     {
@@ -16,6 +19,7 @@ public class TurretShooter : MonoBehaviour
 
             canonAnimation.SetTrigger("Fire");
 
+            audioSource.PlayOneShot(shootClip);
         }
     }
 }

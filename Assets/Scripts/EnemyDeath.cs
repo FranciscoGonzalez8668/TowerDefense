@@ -20,6 +20,10 @@ public class EnemyDeath : MonoBehaviour
         {
             animator.SetTrigger("Die");
         }
+        if(AudioManager.instance !=null)
+        {
+            AudioManager.instance.PlayEnemyDeath();
+        }
     }
     public void OnDeathComplete()
     {
