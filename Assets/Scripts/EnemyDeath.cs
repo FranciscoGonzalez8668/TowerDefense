@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class EnemyDeath : MonoBehaviour 
 {
+
+
+    [SerializeField] private ParticleSystem deathEffect;
     private Animator animator;
 
 
@@ -29,6 +32,10 @@ public class EnemyDeath : MonoBehaviour
     {
         EnemyManager.instance.killedCount++;
         EnemyManager.instance.activeEnemies.Remove(transform.parent.gameObject);
+        if (deathEffect != null)
+        {
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+        }
         Destroy(transform.parent.gameObject);
     }
 
