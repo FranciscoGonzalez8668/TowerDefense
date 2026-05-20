@@ -16,6 +16,19 @@ public class TowerDie : MonoBehaviour
             if (cam != null)
                 cam.transform.SetParent(null);
 
+            if (SaveManager.instance != null)
+            {
+                int kills = EnemyManager.instance.killedCount;
+                if (kills > SaveManager.instance.data.highScore)
+                    SaveManager.instance.data.highScore = kills;
+
+                float currentTime = FindObjectOfType<ScoreManager>().GetTime();
+                if (currentTime > SaveManager.instance.data.bestTime)
+                    SaveManager.instance.data.bestTime = currentTime;
+
+                SaveManager.instance.SaveData();
+            }
+
             transform.parent.gameObject.SetActive(false);
         }
         if (AudioManager.instance != null)

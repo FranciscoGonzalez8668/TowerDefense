@@ -32,6 +32,8 @@ public class EnemyDeath : MonoBehaviour
     {
         EnemyManager.instance.killedCount++;
         EnemyManager.instance.activeEnemies.Remove(transform.parent.gameObject);
+        SaveManager.instance.data.totalKills = EnemyManager.instance.killedCount;
+        SaveManager.instance.SaveData();
         if (deathEffect != null)
         {
             Instantiate(deathEffect, transform.position, Quaternion.identity);
